@@ -20,9 +20,6 @@ namespace ChatEmail.Controllers
             _userManager = userManager;
         }
 
-        
-
-
         public async Task<IActionResult> Index(string search)
         {
             var user = await _userManager.FindByNameAsync(User.Identity.Name);
