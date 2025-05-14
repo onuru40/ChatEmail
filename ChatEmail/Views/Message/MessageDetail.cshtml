@@ -1,0 +1,34 @@
+﻿@model Message
+@{
+    ViewData["Title"] = "MessageDetail";
+    Layout = "~/Views/Shared/_MessageLayout.cshtml";
+}
+<div class="email-right-box">
+    <div class="read-content">
+
+        <div class="media pt-5">
+
+            <div class="media-body">
+                <h5 class="m-b-3">@Model.SenderName</h5>
+                <p class="m-b-2">@Model.SendDate.ToShortDateString()</p>
+            </div>
+
+        </div>
+        <hr>
+        <div class="media mb-4 mt-1">
+            <div class="media-body">
+                <span class="float-right">@Model.SendDate</span>
+                <h4 class="m-0 text-primary">@Model.Subject</h4><small class="text-muted">Kişisine : @Model.ReceiverEmail</small>
+            </div>
+        </div>
+        <h5 class="m-b-15">@Model.ReceiverName</h5>
+        <p><strong>@Model.ReceiverName ,</strong>@Model.Subject</p>
+        <p>
+            @Model.MessageDetail
+        </p>
+        <p>@Model.ReceiverName</p>
+        <hr>
+
+    </div>
+</div>
+
